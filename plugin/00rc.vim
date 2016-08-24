@@ -1,5 +1,5 @@
 set background=dark
-syntax on
+syntax enable
 
 " Expand tabs to spaces
 filetype plugin indent on
@@ -9,4 +9,7 @@ set tabstop=4
 set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
+
+colorscheme monokai
+set t_Co=256
 
