@@ -13,3 +13,12 @@ set expandtab
 colorscheme monokai
 set t_Co=256
 
+" Show autocomplete options
+set wildmenu
+
+" Highlight search matches
+set hlsearch
+
+nnoremap <C-e> :b<Space>
+nnoremap <C-a> :NERDTreeToggle<CR>
+
