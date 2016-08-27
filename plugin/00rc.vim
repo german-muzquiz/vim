@@ -34,3 +34,8 @@ set number
 colorscheme monokai
 set t_Co=256
 
+" CtrlP plugin
+let g:ctrlp_max_files = 100000
+let g:ctrlp_max_depth = 100
+
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*
