@@ -39,3 +39,16 @@ let g:ctrlp_max_files = 100000
 let g:ctrlp_max_depth = 100
 
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*
+
+set foldmethod=indent
+set foldnestmax=10
+set nofoldenable
+set foldlevel=2
+
+" Smooth scroll!
+noremap <C-down> 1j1<C-e>
+noremap <C-up> 1k1<C-y>
+noremap <PageUp> <PageUp>M
+noremap <PageDown> <PageDown>M
+
+
