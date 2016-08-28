@@ -48,8 +48,8 @@ set foldlevel=2
 " Smooth scroll!
 noremap <C-down> 1j1<C-e>
 noremap <C-up> 1k1<C-y>
-noremap <PageUp> <PageUp>M
-noremap <PageDown> <PageDown>M
+noremap <PageUp> <PageUp>Mgm
+noremap <PageDown> <PageDown>Mgm
 
 set nowrap
 set sidescroll=1
@@ -58,4 +58,6 @@ set sidescrolloff=100
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
+" Search visually selected text
+vnoremap // y/<C-R>"<CR>
 
