@@ -64,7 +64,13 @@ let mapleader=","
 nnoremap <Leader>1 :NERDTreeToggle<CR>
 nnoremap <Leader>a <esc>ggVG<CR>
 nnoremap <Leader>l gg=G
-
+" Split window and move to it
+nnoremap <Leader>w <C-w>v<C-w>l
+" Resize windows
+"nnoremap <Leader>< <C-W><
+"nnoremap <Leader>> <C-W>>
+"nnoremap <Leader>+ <C-W>+
+"nnoremap <Leader>- <C-W>-
 
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
@@ -76,7 +82,7 @@ set t_Co=256
 " CtrlP plugin
 let g:ctrlp_max_files = 100000
 let g:ctrlp_max_depth = 100
-
+let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Smooth scroll!
 noremap <C-down> 1j1<C-e>
@@ -105,8 +111,4 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 "set complete+=k**/*.java
 
 " Resize windows
-map < <C-W><
-map > <C-W>>
-map + <C-W>+
-map - <C-W>-
 
