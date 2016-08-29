@@ -1,11 +1,2 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/german/Projects/ocejpa/example'
-let g:netrw_dirhist_2='/home/german/Projects/ocejpa'
-let g:netrw_dirhist_3='/home/german/Projects'
-let g:netrw_dirhist_4='/home/german/Projects/acacia'
-let g:netrw_dirhist_5='/home/german/Projects/ocejpa/example'
-let g:netrw_dirhist_6='/home/german/Projects/ocejpa/example/example'
-let g:netrw_dirhist_7='/home/german/Projects/ocejpa/example'
-let g:netrw_dirhist_8='/home/german/Projects/ocejpa/example/example'
-let g:netrw_dirhist_9='/home/german/Projects/ocejpa/example'
+let g:netrw_dirhist_cnt =0

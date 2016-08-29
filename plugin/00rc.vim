@@ -12,21 +12,20 @@ set expandtab
 
 " Show autocomplete options
 set wildmenu
+set wildmode=longest:full
+set completeopt=longest,preview,menuone
 
 " Highlight search matches
 set hlsearch
 
 " Keybindings
-" Show buffer list
-map <C-e> :b<Space>
 " Show/hide tree
 map <C-x> :NERDTreeToggle<CR>
 " Select all
 map <C-a> <esc>ggVG<CR>
-" Indent all
 map <C-l> gg=G
-" Xml format
-map <C-k> :%s/></>\r</g<CR>
+au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
 
 set incsearch
 set number
@@ -38,7 +37,7 @@ set t_Co=256
 let g:ctrlp_max_files = 100000
 let g:ctrlp_max_depth = 100
 
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*,*/*.jar,*/*.class,*/*.zip,*/*.tar,*/*.gz,*/*.war,*/bower_components/*
 
 set foldmethod=indent
 set foldnestmax=10
@@ -53,11 +52,33 @@ noremap <PageDown> <PageDown>Mgm
 
 set nowrap
 set sidescroll=1
-set sidescrolloff=100
+set sidescrolloff=50
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
 
 " Search visually selected text
 vnoremap // y/<C-R>"<CR>
+
+" Remember last position in file
+if has("autocmd")
+    au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
+
+"set ignorecase
+"set smartcase
+
+set clipboard=unnamedplus
+
+inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
+  \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
+
+
+"set complete+=k**/*.java
+
+" Resize windows
+map < <C-W><
+map > <C-W>>
+map + <C-W>+
+map - <C-W>-
 
