@@ -82,7 +82,7 @@ set t_Co=256
 " CtrlP plugin
 let g:ctrlp_max_files = 100000
 let g:ctrlp_max_depth = 100
-let g:ctrlp_cmd = 'CtrlPMRU'
+"let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Smooth scroll!
 noremap <C-down> 1j1<C-e>
