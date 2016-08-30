@@ -55,13 +55,12 @@ nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
 
-inoremap <F1> <ESC>
-nnoremap <F1> <ESC>
-vnoremap <F1> <ESC>
+nnoremap d "_d
+vnoremap d "_d
 
 " Custom bindings
 let mapleader=","
-nnoremap <Leader>1 :NERDTreeToggle<CR>
+nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <Leader>a <esc>ggVG<CR>
 nnoremap <Leader>l gg=G
 " Split window and move to it
