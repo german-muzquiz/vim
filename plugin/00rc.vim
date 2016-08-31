@@ -45,6 +45,7 @@ set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
+set pastetoggle=<F2>
 
 
 " Remaps
@@ -54,13 +55,11 @@ vnoremap / /\v
 nnoremap <leader><space> :noh<cr>
 nnoremap <tab> %
 vnoremap <tab> %
+nnoremap <F1> :NERDTreeToggle<CR>
 
-nnoremap d "_d
-vnoremap d "_d
 
 " Custom bindings
 let mapleader=","
-nnoremap <F1> :NERDTreeToggle<CR>
 nnoremap <Leader>a <esc>ggVG<CR>
 nnoremap <Leader>l gg=G
 " Split window and move to it
