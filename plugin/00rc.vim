@@ -31,7 +31,6 @@ set completeopt=longest,preview,menuone
 set cursorline
 set ttyfast
 set ruler
-set laststatus=2
 set relativenumber
 set number
 "set undofile
@@ -46,29 +45,22 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 set pastetoggle=<F2>
+set clipboard=unnamedplus
+set backupdir=~/.vim/backup
+set directory=~/.vim/swap
 
 
 " Remaps
-nnoremap / /\v
-vnoremap / /\v
-
-nnoremap <leader><space> :noh<cr>
-nnoremap <tab> %
-vnoremap <tab> %
 nnoremap <F1> :NERDTreeToggle<CR>
 
 
 " Custom bindings
 let mapleader=","
+nnoremap <leader><space> :noh<cr>
 nnoremap <Leader>a <esc>ggVG<CR>
 nnoremap <Leader>l gg=G
 " Split window and move to it
 nnoremap <Leader>w <C-w>v<C-w>l
-" Resize windows
-"nnoremap <Leader>< <C-W><
-"nnoremap <Leader>> <C-W>>
-"nnoremap <Leader>+ <C-W>+
-"nnoremap <Leader>- <C-W>-
 
 au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
@@ -85,6 +77,10 @@ let g:ctrlp_max_depth = 100
 " Smooth scroll!
 noremap <C-down> 1j1<C-e>
 noremap <C-up> 1k1<C-y>
+noremap j 1j1<C-e>
+noremap k 1k1<C-y>
+noremap <C-d> <C-d>Mgm
+noremap <C-u> <C-u>Mgm
 noremap <PageUp> <PageUp>Mgm
 noremap <PageDown> <PageDown>Mgm
 
@@ -100,7 +96,6 @@ if has("autocmd")
     au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 endif
 
-set clipboard=unnamedplus
 
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
@@ -108,5 +103,4 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 
 "set complete+=k**/*.java
 
-" Resize windows
 
