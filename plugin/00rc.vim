@@ -17,7 +17,6 @@ set expandtab
 set softtabstop=4
 set encoding=utf-8
 set nowrap
-set scrolloff=3
 set sidescroll=1
 set sidescrolloff=50
 set autoindent
@@ -45,9 +44,24 @@ set foldnestmax=10
 set nofoldenable
 set foldlevel=2
 set pastetoggle=<F2>
+set so=999
 set clipboard=unnamedplus
 set backupdir=~/.vim/backup
 set directory=~/.vim/swap
+
+if has('statusline')
+  set laststatus=2
+  " Broken down into easily includeable segments
+  set statusline=\ %n\ %*             "buffer number
+  set statusline+=%<%f\    " Filename
+  set statusline+=%w%h%m%r " Options
+  set statusline+=%{fugitive#statusline()} "  Git Hotness
+  set statusline+=\ [%{&ff}/%Y]            " filetype
+"  set statusline+=\ [%{getcwd()}]          " current dir
+  set statusline+=%#warningmsg#
+  set statusline+=%*
+  set statusline+=%=%-14.(%l,%c%V%)\ %p%%  " Right aligned file nav info
+endif
 
 
 " Remaps
@@ -62,7 +76,7 @@ nnoremap <Leader>l gg=G
 " Split window and move to it
 nnoremap <Leader>w <C-w>v<C-w>l
 
-au FileType xml setlocal equalprg=xmllint\ --format\ --recover\ -\ 2>/dev/null
+au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> gg=G
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
 
 
@@ -75,10 +89,6 @@ let g:ctrlp_max_depth = 100
 "let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Smooth scroll!
-noremap <C-down> 1j1<C-e>
-noremap <C-up> 1k1<C-y>
-noremap j 1j1<C-e>
-noremap k 1k1<C-y>
 noremap <C-d> <C-d>Mgm
 noremap <C-u> <C-u>Mgm
 noremap <PageUp> <PageUp>Mgm
@@ -102,5 +112,38 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
 
 
 "set complete+=k**/*.java
+
+" Neocomplete stuff
+" Disable AutoComplPop.
+let g:acp_enableAtStartup = 0
+" Use neocomplete.
+let g:neocomplete#enable_at_startup = 1
+" Use smartcase.
+let g:neocomplete#enable_smart_case = 1
+" Set minimum syntax keyword length.
+let g:neocomplete#sources#syntax#min_keyword_length = 3
+let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
+
+" <TAB>: completion.
+inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
+" Enable omni completion.
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+
+" Define keyword.
+if !exists('g:neocomplete#keyword_patterns')
+    let g:neocomplete#keyword_patterns = {}
+endif
+let g:neocomplete#keyword_patterns['default'] = '\h\w*'
+
+" Enable heavy omni completion.
+if !exists('g:neocomplete#sources#omni#input_patterns')
+  let g:neocomplete#sources#omni#input_patterns = {}
+endif
+let g:neocomplete#sources#omni#input_patterns.java = '\h\w*\.\w*'
 
 
