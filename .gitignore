@@ -1,7 +1,3 @@
-backup
-swap
-
 !backup/README.txt
 !swap/README.txt
-!bundle/vim-fugitive
 
