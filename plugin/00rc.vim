@@ -25,7 +25,7 @@ set showcmd
 set hidden
 " Show autocomplete options
 set wildmenu
-set wildmode=longest:full
+"set wildmode=longest:full
 set completeopt=longest,preview,menuone
 set cursorline
 set ttyfast
@@ -46,8 +46,8 @@ set foldlevel=2
 set pastetoggle=<F2>
 set so=999
 set clipboard=unnamedplus
-set backupdir=~/.vim/backup
-set directory=~/.vim/swap
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swap//
 
 if has('statusline')
   set laststatus=2
@@ -69,12 +69,15 @@ nnoremap <F1> :NERDTreeToggle<CR>
 
 
 " Custom bindings
-let mapleader=","
-nnoremap <leader><space> :noh<cr>
+let mapleader="\<Space>"
+nnoremap <Leader> <nop>
+nnoremap <leader>, :noh<CR>
 nnoremap <Leader>a <esc>ggVG<CR>
 nnoremap <Leader>l gg=G
 " Split window and move to it
 nnoremap <Leader>w <C-w>v<C-w>l
+nnoremap <Leader>t :UpdateTags <bar> HighlightTags<CR>
+nnoremap <Leader>b :CtrlPBuffer<CR>
 
 au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> gg=G
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
@@ -89,10 +92,11 @@ let g:ctrlp_max_depth = 100
 "let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Smooth scroll!
-noremap <C-d> <C-d>Mgm
-noremap <C-u> <C-u>Mgm
-noremap <PageUp> <PageUp>Mgm
-noremap <PageDown> <PageDown>Mgm
+noremap <C-d> <C-d>M
+noremap <C-u> <C-u>M
+noremap <PageUp> <PageUp>M
+noremap <PageDown> <PageDown>M
+vmap v <Plug>(expand_region_expand)
 
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
@@ -110,8 +114,6 @@ endif
 inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
-
-"set complete+=k**/*.java
 
 " Neocomplete stuff
 " Disable AutoComplPop.
@@ -133,6 +135,7 @@ autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
 autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
@@ -144,6 +147,15 @@ let g:neocomplete#keyword_patterns['default'] = '\h\w*'
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
-let g:neocomplete#sources#omni#input_patterns.java = '\h\w*\.\w*'
+
+
+" Auto-tags
+set tags=./tags;
+let g:easytags_dynamic_files = 1
+"let g:easytags_events = ['BufWritePost']
+let g:easytags_file = '~/.vim/tags'
+let g:easytags_auto_highlight = 0
+let g:easytags_on_cursorhold = 0
+let g:easytags_auto_update = 0
 
 
