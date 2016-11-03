@@ -1,0 +1,53 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+Department	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^public class Department {$/;"	c	language:Java
+department	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private Department department;$/;"	f	language:Java	class:Employee	file:
+Employee	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^public class Employee {$/;"	c	language:Java
+employee	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    private Employee employee;$/;"	f	language:Java	class:ParkingSpace	file:
+employeeType	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private EmployeeType employeeType;$/;"	f	language:Java	class:Employee	file:
+example	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^package example;$/;"	p	language:Java
+example	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^package example;$/;"	p	language:Java
+example	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^package example;$/;"	p	language:Java
+example	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^package example;$/;"	p	language:Java
+example	/home/german/Projects/ocejpa/src/chapter4/example/Test.java	/^package example;$/;"	p	language:Java
+getDepartment	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public Department getDepartment() {$/;"	m	language:Java	class:Employee
+getEmployee	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public Employee getEmployee() {$/;"	m	language:Java	class:ParkingSpace
+getEmployeeType	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public EmployeeType getEmployeeType() {$/;"	m	language:Java	class:Employee
+getId	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public long getId() {$/;"	m	language:Java	class:Department
+getId	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public long getId() {$/;"	m	language:Java	class:Employee
+getId	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public long getId() {$/;"	m	language:Java	class:ParkingSpace
+getJoinTime	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public Calendar getJoinTime() {$/;"	m	language:Java	class:Employee
+getMySerializable	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public MySerializable getMySerializable() {$/;"	m	language:Java	class:Employee
+getName	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public String getName() {$/;"	m	language:Java	class:Department
+getName	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public String getName() {$/;"	m	language:Java	class:Employee
+getName	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public String getName() {$/;"	m	language:Java	class:ParkingSpace
+getparkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public ParkingSpace getparkingSpace() {$/;"	m	language:Java	class:Employee
+getText	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^    public String getText() {$/;"	m	language:Java	class:MySerializable
+id	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    private long id;$/;"	f	language:Java	class:Department	file:
+id	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private long id;$/;"	f	language:Java	class:Employee	file:
+id	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    private long id;$/;"	f	language:Java	class:ParkingSpace	file:
+joinTime	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private Calendar joinTime;$/;"	f	language:Java	class:Employee	file:
+main	/home/german/Projects/ocejpa/src/chapter4/example/Test.java	/^    public static void main(String[] args) {$/;"	m	language:Java	class:Test
+mySerializable	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private MySerializable mySerializable;$/;"	f	language:Java	class:Employee	file:
+MySerializable	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^public class MySerializable implements Serializable {$/;"	c	language:Java
+name	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    private String name;$/;"	f	language:Java	class:Department	file:
+name	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public String name;$/;"	f	language:Java	class:Employee
+name	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    private String name;$/;"	f	language:Java	class:ParkingSpace	file:
+parkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private ParkingSpace parkingSpace;$/;"	f	language:Java	class:Employee	file:
+ParkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^public class ParkingSpace {$/;"	c	language:Java
+salary	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private long salary;$/;"	f	language:Java	class:Employee	file:
+setDepartment	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setDepartment(Department department) {$/;"	m	language:Java	class:Employee
+setEmployee	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public void setEmployee(Employee employee) {$/;"	m	language:Java	class:ParkingSpace
+setEmployeeType	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setEmployeeType(EmployeeType type) {$/;"	m	language:Java	class:Employee
+setId	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public void setId(long id) {$/;"	m	language:Java	class:Department
+setId	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setId(int id) {$/;"	m	language:Java	class:Employee
+setId	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public void setId(long id) {$/;"	m	language:Java	class:ParkingSpace
+setJoinTime	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setJoinTime(Calendar joinTime) {$/;"	m	language:Java	class:Employee
+setMySerializable	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setMySerializable(MySerializable mySerializable) {$/;"	m	language:Java	class:Employee
+setName	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public void setName(String name) {$/;"	m	language:Java	class:Department
+setName	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setName(String name) {$/;"	m	language:Java	class:Employee
+setName	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public void setName(String name) {$/;"	m	language:Java	class:ParkingSpace
+setParkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setParkingSpace(ParkingSpace parkingSpace) {$/;"	m	language:Java	class:Employee
+setSalary	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setSalary(long salary) {$/;"	m	language:Java	class:Employee
+setText	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^    public void setText(String text) {$/;"	m	language:Java	class:MySerializable
+Test	/home/german/Projects/ocejpa/src/chapter4/example/Test.java	/^public class Test {$/;"	c	language:Java
+text	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^    private String text;$/;"	f	language:Java	class:MySerializable	file:
