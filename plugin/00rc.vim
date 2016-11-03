@@ -48,6 +48,8 @@ set so=999
 "set clipboard=unnamedplus
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
+" Write all changes when leaving buffer
+set autowriteall
 
 if has('statusline')
   set laststatus=2
