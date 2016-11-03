@@ -45,7 +45,7 @@ set nofoldenable
 set foldlevel=2
 set pastetoggle=<F2>
 set so=999
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 
