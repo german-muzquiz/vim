@@ -36,7 +36,7 @@ set number
 " Highlight search matches
 set hlsearch
 set incsearch
-set ignorecase
+"set ignorecase
 set smartcase
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*,*/*.jar,*/*.class,*/*.zip,*/*.tar,*/*.gz,*/*.war,*/bower_components/*
 set foldmethod=indent
@@ -159,5 +159,17 @@ let g:easytags_file = '~/.vim/tags'
 let g:easytags_auto_highlight = 0
 let g:easytags_on_cursorhold = 0
 let g:easytags_auto_update = 0
+
+"set updatetime=10
+
+"function! HighlightWordUnderCursor()
+    "if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
+        "exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/' 
+    "else 
+        "match none 
+    "endif
+"endfunction
+"
+"autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 
