@@ -1,5 +1,6 @@
 backup
 swap
+tags
 
 !backup/README.txt
 !swap/README.txt

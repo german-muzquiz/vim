@@ -1,53 +1,35 @@
 !_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
-Department	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^public class Department {$/;"	c	language:Java
-department	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private Department department;$/;"	f	language:Java	class:Employee	file:
-Employee	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^public class Employee {$/;"	c	language:Java
-employee	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    private Employee employee;$/;"	f	language:Java	class:ParkingSpace	file:
-employeeType	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private EmployeeType employeeType;$/;"	f	language:Java	class:Employee	file:
-example	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^package example;$/;"	p	language:Java
-example	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^package example;$/;"	p	language:Java
-example	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^package example;$/;"	p	language:Java
-example	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^package example;$/;"	p	language:Java
-example	/home/german/Projects/ocejpa/src/chapter4/example/Test.java	/^package example;$/;"	p	language:Java
-getDepartment	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public Department getDepartment() {$/;"	m	language:Java	class:Employee
-getEmployee	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public Employee getEmployee() {$/;"	m	language:Java	class:ParkingSpace
-getEmployeeType	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public EmployeeType getEmployeeType() {$/;"	m	language:Java	class:Employee
-getId	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public long getId() {$/;"	m	language:Java	class:Department
-getId	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public long getId() {$/;"	m	language:Java	class:Employee
-getId	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public long getId() {$/;"	m	language:Java	class:ParkingSpace
-getJoinTime	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public Calendar getJoinTime() {$/;"	m	language:Java	class:Employee
-getMySerializable	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public MySerializable getMySerializable() {$/;"	m	language:Java	class:Employee
-getName	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public String getName() {$/;"	m	language:Java	class:Department
-getName	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public String getName() {$/;"	m	language:Java	class:Employee
-getName	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public String getName() {$/;"	m	language:Java	class:ParkingSpace
-getparkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public ParkingSpace getparkingSpace() {$/;"	m	language:Java	class:Employee
-getText	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^    public String getText() {$/;"	m	language:Java	class:MySerializable
-id	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    private long id;$/;"	f	language:Java	class:Department	file:
-id	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private long id;$/;"	f	language:Java	class:Employee	file:
-id	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    private long id;$/;"	f	language:Java	class:ParkingSpace	file:
-joinTime	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private Calendar joinTime;$/;"	f	language:Java	class:Employee	file:
-main	/home/german/Projects/ocejpa/src/chapter4/example/Test.java	/^    public static void main(String[] args) {$/;"	m	language:Java	class:Test
-mySerializable	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private MySerializable mySerializable;$/;"	f	language:Java	class:Employee	file:
-MySerializable	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^public class MySerializable implements Serializable {$/;"	c	language:Java
-name	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    private String name;$/;"	f	language:Java	class:Department	file:
-name	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public String name;$/;"	f	language:Java	class:Employee
-name	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    private String name;$/;"	f	language:Java	class:ParkingSpace	file:
-parkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private ParkingSpace parkingSpace;$/;"	f	language:Java	class:Employee	file:
-ParkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^public class ParkingSpace {$/;"	c	language:Java
-salary	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    private long salary;$/;"	f	language:Java	class:Employee	file:
-setDepartment	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setDepartment(Department department) {$/;"	m	language:Java	class:Employee
-setEmployee	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public void setEmployee(Employee employee) {$/;"	m	language:Java	class:ParkingSpace
-setEmployeeType	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setEmployeeType(EmployeeType type) {$/;"	m	language:Java	class:Employee
-setId	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public void setId(long id) {$/;"	m	language:Java	class:Department
-setId	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setId(int id) {$/;"	m	language:Java	class:Employee
-setId	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public void setId(long id) {$/;"	m	language:Java	class:ParkingSpace
-setJoinTime	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setJoinTime(Calendar joinTime) {$/;"	m	language:Java	class:Employee
-setMySerializable	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setMySerializable(MySerializable mySerializable) {$/;"	m	language:Java	class:Employee
-setName	/home/german/Projects/ocejpa/src/chapter4/example/Department.java	/^    public void setName(String name) {$/;"	m	language:Java	class:Department
-setName	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setName(String name) {$/;"	m	language:Java	class:Employee
-setName	/home/german/Projects/ocejpa/src/chapter4/example/ParkingSpace.java	/^    public void setName(String name) {$/;"	m	language:Java	class:ParkingSpace
-setParkingSpace	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setParkingSpace(ParkingSpace parkingSpace) {$/;"	m	language:Java	class:Employee
-setSalary	/home/german/Projects/ocejpa/src/chapter4/example/Employee.java	/^    public void setSalary(long salary) {$/;"	m	language:Java	class:Employee
-setText	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^    public void setText(String text) {$/;"	m	language:Java	class:MySerializable
-Test	/home/german/Projects/ocejpa/src/chapter4/example/Test.java	/^public class Test {$/;"	c	language:Java
-text	/home/german/Projects/ocejpa/src/chapter4/example/MySerializable.java	/^    private String text;$/;"	f	language:Java	class:MySerializable	file:
+//	/home/german/.vim/plugin/00rc.vim	/^vnoremap \/\/ y\/<C-R>"<CR>$/;"	m	language:Vim
+<C-d>	/home/german/.vim/plugin/00rc.vim	/^noremap <C-d> <C-d>M$/;"	m	language:Vim
+<C-n>	/home/german/.vim/plugin/00rc.vim	/^inoremap <expr> <C-n> pumvisible() ? '<C-n>' :$/;"	m	language:Vim
+<C-u>	/home/german/.vim/plugin/00rc.vim	/^noremap <C-u> <C-u>M$/;"	m	language:Vim
+<F1>	/home/german/.vim/plugin/00rc.vim	/^nnoremap <F1> :NERDTreeToggle<CR>$/;"	m	language:Vim
+<Leader>	/home/german/.vim/plugin/00rc.vim	/^nnoremap <Leader> <nop>$/;"	m	language:Vim
+<leader>,	/home/german/.vim/plugin/00rc.vim	/^nnoremap <leader>, :noh<CR>$/;"	m	language:Vim
+<Leader>a	/home/german/.vim/plugin/00rc.vim	/^nnoremap <Leader>a <esc>ggVG<CR>$/;"	m	language:Vim
+<Leader>b	/home/german/.vim/plugin/00rc.vim	/^nnoremap <Leader>b :CtrlPBuffer<CR>$/;"	m	language:Vim
+<Leader>l	/home/german/.vim/plugin/00rc.vim	/^nnoremap <Leader>l gg=G$/;"	m	language:Vim
+<Leader>t	/home/german/.vim/plugin/00rc.vim	/^nnoremap <Leader>t :UpdateTags <bar> HighlightTags<CR>$/;"	m	language:Vim
+<Leader>w	/home/german/.vim/plugin/00rc.vim	/^nnoremap <Leader>w <C-w>v<C-w>l$/;"	m	language:Vim
+<PageDown>	/home/german/.vim/plugin/00rc.vim	/^noremap <PageDown> <PageDown>M$/;"	m	language:Vim
+<PageUp>	/home/german/.vim/plugin/00rc.vim	/^noremap <PageUp> <PageUp>M$/;"	m	language:Vim
+<TAB>	/home/german/.vim/plugin/00rc.vim	/^inoremap <expr><TAB>  pumvisible() ? "\\<C-n>" : "\\<TAB>"$/;"	m	language:Vim
+g:acp_enableAtStartup	/home/german/.vim/plugin/00rc.vim	/^let g:acp_enableAtStartup = 0$/;"	v	language:Vim
+g:ctrlp_max_depth	/home/german/.vim/plugin/00rc.vim	/^let g:ctrlp_max_depth = 100$/;"	v	language:Vim
+g:ctrlp_max_files	/home/german/.vim/plugin/00rc.vim	/^let g:ctrlp_max_files = 100000$/;"	v	language:Vim
+g:easytags_async	/home/german/.vim/plugin/00rc.vim	/^let g:easytags_async = 1$/;"	v	language:Vim
+g:easytags_auto_highlight	/home/german/.vim/plugin/00rc.vim	/^let g:easytags_auto_highlight = 0$/;"	v	language:Vim
+g:easytags_auto_update	/home/german/.vim/plugin/00rc.vim	/^let g:easytags_auto_update = 0$/;"	v	language:Vim
+g:easytags_dynamic_files	/home/german/.vim/plugin/00rc.vim	/^let g:easytags_dynamic_files = 1$/;"	v	language:Vim
+g:easytags_file	/home/german/.vim/plugin/00rc.vim	/^let g:easytags_file = '~\/.vim\/tags'$/;"	v	language:Vim
+g:easytags_on_cursorhold	/home/german/.vim/plugin/00rc.vim	/^let g:easytags_on_cursorhold = 0$/;"	v	language:Vim
+g:neocomplete#enable_at_startup	/home/german/.vim/plugin/00rc.vim	/^let g:neocomplete#enable_at_startup = 1$/;"	v	language:Vim
+g:neocomplete#enable_smart_case	/home/german/.vim/plugin/00rc.vim	/^let g:neocomplete#enable_smart_case = 1$/;"	v	language:Vim
+g:neocomplete#keyword_patterns	/home/german/.vim/plugin/00rc.vim	/^    let g:neocomplete#keyword_patterns = {}$/;"	v	language:Vim
+g:neocomplete#keyword_patterns	/home/german/.vim/plugin/00rc.vim	/^let g:neocomplete#keyword_patterns['default'] = '\\h\\w*'$/;"	v	language:Vim
+g:neocomplete#lock_buffer_name_pattern	/home/german/.vim/plugin/00rc.vim	/^let g:neocomplete#lock_buffer_name_pattern = '\\*ku\\*'$/;"	v	language:Vim
+g:neocomplete#sources#omni#input_patterns	/home/german/.vim/plugin/00rc.vim	/^  let g:neocomplete#sources#omni#input_patterns = {}$/;"	v	language:Vim
+g:neocomplete#sources#syntax#min_keyword_length	/home/german/.vim/plugin/00rc.vim	/^let g:neocomplete#sources#syntax#min_keyword_length = 3$/;"	v	language:Vim
+mapleader	/home/german/.vim/plugin/00rc.vim	/^let mapleader="\\<Space>"$/;"	v	language:Vim
+v	/home/german/.vim/plugin/00rc.vim	/^vmap v <Plug>(expand_region_expand)$/;"	m	language:Vim
+w!!	/home/german/.vim/plugin/00rc.vim	/^cmap w!! w !sudo tee > \/dev\/null %$/;"	m	language:Vim

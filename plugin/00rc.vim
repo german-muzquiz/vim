@@ -25,7 +25,6 @@ set showcmd
 set hidden
 " Show autocomplete options
 set wildmenu
-"set wildmode=longest:full
 set completeopt=longest,preview,menuone
 set cursorline
 set ttyfast
@@ -36,7 +35,6 @@ set number
 " Highlight search matches
 set hlsearch
 set incsearch
-"set ignorecase
 set smartcase
 set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*,*/*.jar,*/*.class,*/*.zip,*/*.tar,*/*.gz,*/*.war,*/bower_components/*
 set foldmethod=indent
@@ -45,7 +43,6 @@ set nofoldenable
 set foldlevel=2
 set pastetoggle=<F2>
 set so=999
-"set clipboard=unnamedplus
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 " Write all changes when leaving buffer
@@ -72,14 +69,15 @@ nnoremap <F1> :NERDTreeToggle<CR>
 
 " Custom bindings
 let mapleader="\<Space>"
-nnoremap <Leader> <nop>
 nnoremap <leader>, :noh<CR>
 nnoremap <Leader>a <esc>ggVG<CR>
 nnoremap <Leader>l gg=G
 " Split window and move to it
 nnoremap <Leader>w <C-w>v<C-w>l
-nnoremap <Leader>t :UpdateTags <bar> HighlightTags<CR>
-nnoremap <Leader>b :CtrlPBuffer<CR>
+"nnoremap <Leader>t :UpdateTags <bar> HighlightTags<CR>
+"nnoremap <Leader>b :CtrlPBuffer<CR>
+" Generate tags for current directory
+nnoremap <Leader>t :!ctags -R --exclude=.git --exclude=target --exclude=node_modules --exclude=bower_components .<CR>
 
 au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> gg=G
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
@@ -128,6 +126,7 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
+
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
@@ -153,23 +152,13 @@ endif
 
 " Auto-tags
 set tags=./tags;
-let g:easytags_dynamic_files = 1
+"let g:easytags_dynamic_files = 1
 "let g:easytags_events = ['BufWritePost']
-let g:easytags_file = '~/.vim/tags'
-let g:easytags_auto_highlight = 0
-let g:easytags_on_cursorhold = 0
-let g:easytags_auto_update = 0
+"let g:easytags_file = '~/.vim/tags'
+"let g:easytags_auto_highlight = 0
+"let g:easytags_on_cursorhold = 0
+"let g:easytags_auto_update = 0
+"let g:easytags_async = 0
 
-"set updatetime=10
-
-"function! HighlightWordUnderCursor()
-    "if getline(".")[col(".")-1] !~# '[[:punct:][:blank:]]' 
-        "exec 'match' 'Search' '/\V\<'.expand('<cword>').'\>/' 
-    "else 
-        "match none 
-    "endif
-"endfunction
-"
-"autocmd! CursorHold,CursorHoldI * call HighlightWordUnderCursor()
 
 
