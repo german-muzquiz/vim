@@ -98,6 +98,10 @@ noremap <PageUp> <PageUp>M
 noremap <PageDown> <PageDown>M
 vmap v <Plug>(expand_region_expand)
 
+nnoremap <silent> }c :cnext<CR>
+nnoremap <silent> {c :cprevious<CR>
+nnoremap <silent> }t :tnext<CR>
+nnoremap <silent> {t :tprevious<CR>
 
 " Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
