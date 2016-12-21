@@ -1,4 +1,4 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/german/Projects/etr/src/main/java/com/skynet/etr'
-let g:netrw_dirhist_2='/home/german/Projects/etr/src/main/java/com/skynet/etr/repository'
+let g:netrw_dirhist_1='/home/german/Projects/etr/src'
+let g:netrw_dirhist_2='/home/german/Projects/etr'

@@ -47,6 +47,7 @@ set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 " Write all changes when leaving buffer
 set autowriteall
+set path+=**
 
 if has('statusline')
   set laststatus=2
@@ -164,5 +165,17 @@ set tags=./tags;
 "let g:easytags_auto_update = 0
 "let g:easytags_async = 0
 
+
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 0
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
+
+let g:syntastic_java_checkers = ["javac"]
+let g:syntastic_java_javac_config_file_enabled = 1
 
 
