@@ -7,9 +7,6 @@
 [submodule "bundle/neocomplete.vim"]
 	path = bundle/neocomplete.vim
 	url = https://github.com/Shougo/neocomplete.vim.git
-[submodule "bundle/nerdtree"]
-	path = bundle/nerdtree
-	url = https://github.com/scrooloose/nerdtree.git
 [submodule "bundle/tabular"]
 	path = bundle/tabular
 	url = https://github.com/godlygeek/tabular.git
@@ -37,3 +34,9 @@
 [submodule "bundle/vim-scala"]
 	path = bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
+[submodule "bundle/tsuquyomi"]
+    path = bundle/tsuquyomi
+    url = https://github.com/Quramy/tsuquyomi.git
+[submodule "bundle/vim-expand-region"]
+    path = bundle/vim-expand-region
+    url = https://github.com/terryma/vim-expand-region.git

@@ -1,6 +1,7 @@
 backup
 swap
 tags
+.netrwhist
 
 !backup/README.txt
 !swap/README.txt

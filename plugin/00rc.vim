@@ -64,10 +64,6 @@ if has('statusline')
 endif
 
 
-" Remaps
-nnoremap <F1> :NERDTreeToggle<CR>
-
-
 " Custom bindings
 let mapleader="\<Space>"
 nnoremap <leader>, :noh<CR>
@@ -166,16 +162,19 @@ set tags=./tags;
 "let g:easytags_async = 0
 
 
+" Synatx checking
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
-
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
-
-let g:syntastic_java_checkers = ["javac"]
+let g:syntastic_enable_signs = 1
+let g:syntastic_typescript_checkers = ['tsuquyomi'] " You shouldn't use 'tsc' checker.
+let g:syntastic_java_checkers = ['javac']
 let g:syntastic_java_javac_config_file_enabled = 1
-
+let g:syntastic_java_maven_options = '-o'
+let g:syntastic_scala_checkers = []
+let g:tsuquyomi_disable_quickfix = 1
 
