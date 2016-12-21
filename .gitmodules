@@ -37,3 +37,12 @@
 [submodule "bundle/syntastic"]
 	path = bundle/syntastic
 	url = git@github.com:germnix/syntastic.git
+[submodule "bundle/vim-expand-region"]
+	path = bundle/vim-expand-region
+	url = https://github.com/terryma/vim-expand-region.git
+[submodule "bundle/vim-wordmotion"]
+	path = bundle/vim-wordmotion
+	url = git@github.com:chaoren/vim-wordmotion.git
+[submodule "bundle/vimproc.vim"]
+	path = bundle/vimproc.vim
+	url = https://github.com/Shougo/vimproc.vim.git
