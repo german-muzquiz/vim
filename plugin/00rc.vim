@@ -153,13 +153,14 @@ endif
 
 " Auto-tags
 set tags=./tags;
-"let g:easytags_dynamic_files = 1
+let g:easytags_dynamic_files = 1
 "let g:easytags_events = ['BufWritePost']
-"let g:easytags_file = '~/.vim/tags'
-"let g:easytags_auto_highlight = 0
+let g:easytags_file = '~/.vim/tags'
+let g:easytags_auto_highlight = 0
 "let g:easytags_on_cursorhold = 0
 "let g:easytags_auto_update = 0
 "let g:easytags_async = 0
+let g:easytags_opts = ['--exclude=.git', '--exclude=target', '--exclude=node_modules', '--exclude=bower_components']
 
 
 " Synatx checking
