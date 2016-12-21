@@ -1,4 +1,4 @@
 let g:netrw_dirhistmax  =10
 let g:netrw_dirhist_cnt =2
-let g:netrw_dirhist_1='/home/german/Projects/cache-buddy'
-let g:netrw_dirhist_2='/home/german/Projects/wdpro-lodging-service'
+let g:netrw_dirhist_1='/home/german/.vim/bundle/vim-javacomplete2/autoload/javacomplete'
+let g:netrw_dirhist_2='/home/german/.vim/bundle/vim-javacomplete2/autoload/javacomplete/classpath'

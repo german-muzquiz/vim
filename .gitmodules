@@ -43,3 +43,6 @@
 [submodule "bundle/vimproc.vim"]
 	path = bundle/vimproc.vim
 	url = https://github.com/Shougo/vimproc.vim.git
+[submodule "bundle/vim-javacomplete2"]
+	path = bundle/vim-javacomplete2
+	url = git@github.com:germnix/vim-javacomplete2.git
