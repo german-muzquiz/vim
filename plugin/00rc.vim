@@ -177,4 +177,6 @@ let g:syntastic_java_javac_config_file_enabled = 1
 let g:syntastic_java_maven_options = '-o'
 let g:syntastic_scala_checkers = []
 let g:tsuquyomi_disable_quickfix = 1
+source ~/.vim/bundle/syntastic/plugin/syntastic.vim
+source ~/.vim/bundle/syntastic/syntax_checkers/java/javac.vim
 
