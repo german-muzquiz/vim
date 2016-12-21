@@ -35,8 +35,8 @@
 	path = bundle/vim-scala
 	url = https://github.com/derekwyatt/vim-scala.git
 [submodule "bundle/tsuquyomi"]
-    path = bundle/tsuquyomi
-    url = https://github.com/Quramy/tsuquyomi.git
-[submodule "bundle/vim-expand-region"]
-    path = bundle/vim-expand-region
-    url = https://github.com/terryma/vim-expand-region.git
+	path = bundle/tsuquyomi
+	url = https://github.com/Quramy/tsuquyomi.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = git@github.com:germnix/syntastic.git
