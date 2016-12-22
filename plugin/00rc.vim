@@ -74,7 +74,8 @@ nnoremap <Leader>w <C-w>v<C-w>l
 "nnoremap <Leader>t :UpdateTags <bar> HighlightTags<CR>
 "nnoremap <Leader>b :CtrlPBuffer<CR>
 " Generate tags for current directory
-nnoremap <Leader>t :!ctags -R --exclude=.git --exclude=target --exclude=node_modules --exclude=bower_components .<CR>
+nnoremap <Leader>t :!ctags -R --exclude=.git --exclude=target --exclude=node_modules --exclude=bower_components --fields=+l --c-kinds=+ --c++-kinds=+p --extra=+q .<CR>
+"nnoremap <Leader>t :UpdateTags -R expand("%:p:h")<CR>
 
 au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> gg=G
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
@@ -160,7 +161,8 @@ let g:easytags_auto_highlight = 0
 "let g:easytags_on_cursorhold = 0
 "let g:easytags_auto_update = 0
 "let g:easytags_async = 0
-let g:easytags_opts = ['--exclude=.git', '--exclude=target', '--exclude=node_modules', '--exclude=bower_components']
+let g:easytags_include_members = 1 " Much more tags for C and Java files
+let g:easytags_opts = ['--exclude=.git', '--exclude=target', '--exclude=node_modules', '--exclude=bower_components', '--fields=+l', '--c-kinds=+', '--c++-kinds=+p', '--extra=+q']
 
 
 " Synatx checking
