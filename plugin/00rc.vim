@@ -76,6 +76,7 @@ nnoremap <Leader>w <C-w>v<C-w>l
 " Generate tags for current directory
 nnoremap <Leader>t :!ctags -R --exclude=.git --exclude=target --exclude=node_modules --exclude=bower_components --fields=+l --c-kinds=+ --c++-kinds=+p --extra=+q .<CR>
 "nnoremap <Leader>t :UpdateTags -R expand("%:p:h")<CR>
+nnoremap <Leader>f :grep -R --exclude-dir=target --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=.git --exclude=tags "" .
 
 au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> gg=G
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
@@ -128,6 +129,10 @@ let g:neocomplete#enable_smart_case = 1
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
 
+let g:netrw_liststyle = 3
+let g:netrw_browse_split = 4
+let g:netrw_altv = 1
+let g:netrw_winsize = 25
 
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
