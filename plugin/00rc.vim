@@ -31,23 +31,26 @@ set ttyfast
 set ruler
 set relativenumber
 set number
-"set undofile
 " Highlight search matches
 set hlsearch
 set incsearch
 set smartcase
-set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*,*/*.jar,*/*.class,*/*.zip,*/*.tar,*/*.gz,*/*.war,*/bower_components/*
+set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.idea/*,*/.DS_Store,*/node_modules/*,*/target/*,*/*.jar,*/*.class,*/*.zip,*/*.tar,*/*.gz,*/*.war,*/bower_components/*,*/dist/*
 set foldmethod=indent
 set foldnestmax=10
 set nofoldenable
 set foldlevel=2
-set pastetoggle=<F2>
+set pastetoggle=<F3>
 set so=999
 set backupdir=~/.vim/backup//
 set directory=~/.vim/swap//
 " Write all changes when leaving buffer
 set autowriteall
 set path+=**
+set tags=./tags;
+colorscheme monokai
+set t_Co=256
+
 
 if has('statusline')
   set laststatus=2
@@ -66,29 +69,24 @@ endif
 
 " Custom bindings
 let mapleader="\<Space>"
+" Hide search highlights
 nnoremap <leader>, :noh<CR>
+" Select all
 nnoremap <Leader>a <esc>ggVG<CR>
+" Format all
 nnoremap <Leader>l gg=G
 " Split window and move to it
 nnoremap <Leader>w <C-w>v<C-w>l
-"nnoremap <Leader>t :UpdateTags <bar> HighlightTags<CR>
-"nnoremap <Leader>b :CtrlPBuffer<CR>
 " Generate tags for current directory
-nnoremap <Leader>t :!ctags -R --exclude=.git --exclude=target --exclude=node_modules --exclude=bower_components --fields=+l --c-kinds=+ --c++-kinds=+p --extra=+q .<CR>
-"nnoremap <Leader>t :UpdateTags -R expand("%:p:h")<CR>
-nnoremap <Leader>f :grep -R --exclude-dir=target --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=.git --exclude=tags "" .
+nnoremap <Leader>t :!ctags -R --exclude=.git --exclude=target --exclude=node_modules --exclude=bower_components --exclude=dist --fields=+l --c-kinds=+ --c++-kinds=+p --extra=+q .<CR>
+" Grep all project
+nnoremap <Leader>f :grep -R --exclude-dir=target --exclude-dir=node_modules --exclude-dir=bower_components --exclude-dir=.git --exclude-dir=dist --exclude=tags "" .
+" Go back to previous buffer
+nnoremap <Leader>6 :b#<CR>
 
 au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> gg=G
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
 
-
-colorscheme monokai
-set t_Co=256
-
-" CtrlP plugin
-let g:ctrlp_max_files = 100000
-let g:ctrlp_max_depth = 100
-"let g:ctrlp_cmd = 'CtrlPMRU'
 
 " Smooth scroll!
 noremap <C-d> <C-d>M
@@ -118,7 +116,7 @@ inoremap <expr> <C-n> pumvisible() ? '<C-n>' :
   \ '<C-n><C-r>=pumvisible() ? "\<lt>Down>" : ""<CR>'
 
 
-" Neocomplete stuff
+" Neocomplete configuration
 " Disable AutoComplPop.
 let g:acp_enableAtStartup = 0
 " Use neocomplete.
@@ -128,15 +126,8 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 let g:neocomplete#lock_buffer_name_pattern = '\*ku\*'
-
-let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
-let g:netrw_altv = 1
-let g:netrw_winsize = 25
-
 " <TAB>: completion.
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
-
 " Enable omni completion.
 autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
 autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
@@ -144,33 +135,18 @@ autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
 autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
 "autocmd FileType java setlocal omnifunc=javacomplete#Complete
-
 " Define keyword.
 if !exists('g:neocomplete#keyword_patterns')
     let g:neocomplete#keyword_patterns = {}
 endif
 let g:neocomplete#keyword_patterns['default'] = '\h\w*'
-
 " Enable heavy omni completion.
 if !exists('g:neocomplete#sources#omni#input_patterns')
   let g:neocomplete#sources#omni#input_patterns = {}
 endif
 
 
-" Auto-tags
-set tags=./tags;
-let g:easytags_dynamic_files = 1
-"let g:easytags_events = ['BufWritePost']
-let g:easytags_file = '~/.vim/tags'
-let g:easytags_auto_highlight = 0
-"let g:easytags_on_cursorhold = 0
-"let g:easytags_auto_update = 0
-"let g:easytags_async = 0
-let g:easytags_include_members = 1 " Much more tags for C and Java files
-let g:easytags_opts = ['--exclude=.git', '--exclude=target', '--exclude=node_modules', '--exclude=bower_components', '--fields=+l', '--c-kinds=+', '--c++-kinds=+p', '--extra=+q']
-
-
-" Synatx checking
+" Syntastic configuration
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
@@ -185,6 +161,17 @@ let g:syntastic_java_javac_config_file_enabled = 1
 let g:syntastic_java_maven_options = '-o'
 let g:syntastic_scala_checkers = []
 let g:tsuquyomi_disable_quickfix = 1
+"let g:tsuquyomi_disable_default_mappings = 0
 source ~/.vim/bundle/syntastic/plugin/syntastic.vim
 source ~/.vim/bundle/syntastic/syntax_checkers/java/javac.vim
+
+
+" xmledit configuration
+let g:closetag_filenames = "*.html,*.xhtml,*.phtml, *.xml"
+
+
+" NERDTree configuration
+let NERDTreeWinSize=45
+nnoremap <F1> :NERDTreeToggle<CR>
+nnoremap <F2> :NERDTreeFind<CR>
 
