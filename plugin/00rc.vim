@@ -48,6 +48,7 @@ set directory=~/.vim/swap//
 set autowriteall
 set path+=**
 set tags=./tags;
+set synmaxcol=120
 colorscheme monokai
 set t_Co=256
 
@@ -74,7 +75,7 @@ nnoremap <leader>, :noh<CR>
 " Select all
 nnoremap <Leader>a <esc>ggVG<CR>
 " Format all
-nnoremap <Leader>l gg=G
+nnoremap <Leader>l :syntax off<CR> gg=G :syntax on<CR>
 " Split window and move to it
 nnoremap <Leader>w <C-w>v<C-w>l
 " Generate tags for current directory
@@ -84,7 +85,8 @@ nnoremap <Leader>f :grep -R --exclude-dir=target --exclude-dir=node_modules --ex
 " Go back to previous buffer
 nnoremap <Leader>6 :b#<CR>
 
-au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> gg=G
+" au FileType xml nnoremap <Leader>l :%s/&lt;/</g<CR> :%s/&gt;/>/g<CR> :%s/></>\r</g<CR> :syntax off<CR> gg=G :syntax on<CR>
+au FileType xml nnoremap <Leader>l :%s/></>\r</g<CR> :syntax off<CR> gg=G :syntax on<CR>
 au FileType json setlocal equalprg=python\ -m\ json.tool\ 2>/dev/null
 
 
