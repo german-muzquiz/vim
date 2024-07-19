@@ -1,0 +1,63 @@
+# --kinddef-python=L,variables,variables of a class
+# --kinddef-Python=M,m,variables of a class
+# --regex-python=/^[[:blank:]]+([a-zA-Z_0-9\-]+):[[:blank:]]+[a-zA-Z_0-9\-\ \|\[]+\]*$/\1/L
+
+# --regex-python=/^[[:blank:]]*class[[:blank:]]+([a-zA-Z_0-9\-]+)(\(([a-zA-Z_0-9\-\[]*\]?)(,[[:blank:]])?\))?:*/\1/M/{scope=push}{_field=inherits:\3}{_field=access:public}
+
+# --_fielddef-python=inherits,parent of a class
+# --_fielddef-python=access,access scope
+#
+# --_tabledef-python=toplevel
+# --_tabledef-python=linecomment
+# --_tabledef-python=class
+# --_tabledef-python=classvariable
+#
+# --_mtable-regex-python=toplevel/#//{tenter=linecomment}
+# --_mtable-regex-python=toplevel/^[[:blank:]]*class[[:blank:]]+//{tenter=class}
+# --_mtable-regex-python=toplevel/.//
+#
+# --_mtable-regex-python=linecomment/(\r\n|\r|\n)//{tleave}
+# --_mtable-regex-python=linecomment/.//
+#
+# # class tag
+# --_mtable-regex-python=class/([a-zA-Z_0-9\-]+)(\(([a-zA-Z_0-9\-\[]*\]?)(,[[:blank:]])?\))?:[^\n]*/\1/M/{scope=push}{_field=inherits:\3}{_field=access:public}
+# # move to another class table on class keyword on first column
+# --_mtable-regex-python=class/\nclass[[:blank:]]+//{scope=clear}{tenter=class}
+# # leave on any non blank char on first column
+# --_mtable-regex-python=class/\n[^ \t]//{scope=pop}{tleave}
+# --_mtable-regex-python=class/([a-zA-Z_0-9\-]+):[[:blank:]]+[a-zA-Z_0-9\-\ \|\[]+\]*$/\1/L/{scope=ref}
+# --_mtable-regex-python=class/.//
+#
+# --fields-python=+{inherits}{access}
+
+
+# # Subparser definition, based on pyhton. Use PCRE regex
+# --langdef=PythonExtras{base=python}{shared}
+# # --langmap=PythonExtras:.py
+# # --langmap=python:.py
+# --map-PythonExtras=+.py
+# --kinddef-pythonextras=v,classvar,Class Variables
+#
+# #--regex-PythonExtras=/^[ \t]*([a-zA-Z_][a-zA-Z0-9_]*)[ \t]*:[ \t]*([a-zA-Z_][a-zA-Z0-9_]*)/\1/v,classvar/
+#
+# --_fielddef-PythonExtras=inherits,parent of a class
+# --_fielddef-PythonExtras=access,access scope
+#
+# --_tabledef-PythonExtras=toplevel
+# --_tabledef-PythonExtras=class
+# --_tabledef-PythonExtras=classvariable
+#
+# --_mtable-regex-PythonExtras=toplevel/^[[:blank:]]*class[[:blank:]]+//{tenter=class}{pcre2}
+# --_mtable-regex-PythonExtras=toplevel/.//
+#
+# # class tag
+# --_mtable-regex-PythonExtras=class/([a-zA-Z_0-9\-]+)(\(([a-zA-Z_0-9\-\[]*\]?)(,[[:blank:]])?\))?:[^\n]*/\1//{placeholder}{scope=push}{_field=inherits:\3}{_field=access:public}
+# --_mtable-regex-PythonExtras=class/^[ \t]*([a-zA-Z_][a-zA-Z0-9_]*)[ \t]*:[ \t]*([a-zA-Z_][a-zA-Z0-9_]*)/\1/v,classvar/{scope=ref}{_field=access:public}
+# # move to another class table on class keyword on first column
+# --_mtable-regex-PythonExtras=class/\nclass[[:blank:]]+//{scope=clear}{tenter=class}{pcre2}
+# # leave on any non blank char on first column
+# --_mtable-regex-PythonExtras=class/\n[^ \t]//{scope=pop}{tleave}{pcre2}
+# --_mtable-regex-PythonExtras=class/([a-zA-Z_0-9\-]+):[[:blank:]]+[a-zA-Z_0-9\-\ \|\[]+\]*$/\1/v/{scope=ref}{pcre2}
+# --_mtable-regex-PythonExtras=class/.//
+#
+# --fields-PythonExtras=+{inherits}{access}

@@ -1,0 +1,4 @@
+ollama
+sqlmodel
+pydantic
+pydantic-core

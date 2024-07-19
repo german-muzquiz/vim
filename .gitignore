@@ -1,9 +1,4 @@
 backup
 swap
 tags
-.netrwhist
-netrwhist
-
-!backup/README.txt
-!swap/README.txt
-
+plugged
